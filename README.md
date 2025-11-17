@@ -3,7 +3,8 @@ Implementation of OSPF Network with DHCP and ACLs Configurations.
 
 
 In this project, I designed and configured a fully functional enterprise-level network in Cisco Packet Tracer using 4 routers, multiple switches,
-and end-user devices (PCs and servers). The main goal was to ensure full connectivity using OSPF as the dynamic routing protocol, assign IP addresses dynamically with DHCP, and enforce access restrictions using extended ACLs
+and end-user devices (PCs and servers). The main goal was to ensure full connectivity using OSPF as the dynamic routing protocol,
+assign IP addresses dynamically with DHCP, and enforce access restrictions using extended ACLs
 
  What I Did ?
 
@@ -41,11 +42,9 @@ I then used Simulation Mode to verify that the entire network could route packet
    
 I implemented extended ACLs to enforce traffic filtering between specific hosts. These are the rules I applied:
 
-🔒 Blocked GNON (192.168.20.2) from communicating with DERVIS (192.168.30.1)
-
-🔒 Blocked OCEANE (192.168.10.2) from communicating with GNON (192.168.20.2)
-
-🔒 Blocked MII (192.168.10.1) from accessing the File Server (192.168.40.2)
+-Blocked GNON (192.168.20.2) from communicating with DERVIS (192.168.30.1)
+-Blocked OCEANE (192.168.10.2) from communicating with GNON (192.168.20.2)
+-Blocked MII (192.168.10.1) from accessing the File Server (192.168.40.2)
 
 Each ACL used the access-list command to deny traffic from a specific source to a destination, then applied to the relevant router interface using ip access-group.
 
